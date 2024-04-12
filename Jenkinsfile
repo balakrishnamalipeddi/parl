@@ -9,33 +9,33 @@ pipeline {
               stages{
                 stage('Build') {
                 steps {
-                  echo 'Building..'
+                  echo 'Building on master agent..'
                   }
                 }
                 stage('Test') {
                   steps {
-                    echo 'Testing..'
+                    echo 'Testing on master agent..'
                  }
-                }
+             }
+          }
       }
-              }
             stage('ubuntu-agent-pipeline') {
              agent{label 'ubuntu'}
               stages{
                 stage('Build') {
                 steps {
-                  echo 'Building..'
+                  echo 'Building on master agent..'
                   }
                 }
                 stage('Test') {
                   steps {
-                    echo 'Testing..'
+                    echo 'Testing on master agent..'
+                   }
                  }
-                }
                }
-              }
              }
-            }
            }
-          }
+         }
+       }
+     }
 
